@@ -97,6 +97,8 @@ EXIT /B 0
     )
 EXIT /B 0
 
+
+
 :SHOW_HELP
     SET "script_name=%~n0%~x0"
     ECHO #######################################################################
@@ -111,7 +113,7 @@ EXIT /B 0
     ECHO # ARCH   : x64                                                        #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
-    ECHO #   %SCRIPT_NAME% [-h^|--help^|--pack^|--unpack]                             #
+    ECHO #     %SCRIPT_NAME% [-h^|--help^|--pack^|--unpack]                           #
     ECHO #                                                                     #
     ECHO # EXAMPLES:                                                           #
     ECHO #     %script_name%                                                       #
@@ -134,7 +136,7 @@ EXIT /B 0
     ECHO #     PATH    This tool will export all local changes that it made to #
     ECHO #         the path's environment variable.                            #
     ECHO #                                                                     #
-    ECHO #     The environment variables will be exported only if this script  #
+    ECHO #     The environment variables will be exported only if this tool    #
     ECHO #     executes without any error.                                     #
     ECHO #                                                                     #
     ECHO #######################################################################

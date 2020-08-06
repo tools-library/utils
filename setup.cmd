@@ -108,21 +108,23 @@ EXIT /B 0
     )
 EXIT /B 0
 
+
+
 :SHOW_HELP
     SET "script_name=%~n0%~x0"
     ECHO #######################################################################
     ECHO #                                                                     #
     ECHO #                      T O O L   S E T U P                            #
     ECHO #                                                                     #
-    ECHO #       'Utils' is a small collection of scripts and programs         #
-    ECHO #       that can be useful in a lot of projects.                      #
+    ECHO #       'UTILS' is a small collection of scripts and programs         #
+    ECHO #        that can be useful in a lot of projects.                     #
     ECHO #                                                                     #
-    ECHO # TOOL   : Utils                                                      #
+    ECHO # TOOL   : UTILS                                                      #
     ECHO # VERSION: 1.0.0                                                      #
     ECHO # ARCH   : Mixed x64 and x32.                                         #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
-    ECHO #   %script_name% {[-h^|--help^|--pack^|--unpack] ^| [utilityN...]}           #
+    ECHO #     %script_name% {[-h^|--help^|--pack^|--unpack] ^| [utilityN...]}         #
     ECHO #                                                                     #
     ECHO # EXAMPLES:                                                           #
     ECHO #     %script_name%                                                       #
@@ -159,7 +161,7 @@ EXIT /B 0
     ECHO #     PATH    This tool will export all local changes that it made to #
     ECHO #         the path's environment variable.                            #
     ECHO #                                                                     #
-    ECHO #     The environment variables will be exported only if this script  #
+    ECHO #     The environment variables will be exported only if this tool    #
     ECHO #     executes without any error.                                     #
     ECHO #                                                                     #
     ECHO # RETURN ERROR CODES:                                                 #

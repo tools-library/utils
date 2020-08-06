@@ -93,21 +93,23 @@ EXIT /B 0
     )
 EXIT /B 0
 
+
+
 :SHOW_HELP
     SET "script_name=%~n0%~x0"
     ECHO #######################################################################
     ECHO #                                                                     #
     ECHO #                      T O O L   S E T U P                            #
     ECHO #                                                                     #
-    ECHO #               '7-Zip' is a file archiver with                       #
-    ECHO #               a high compression ratio.                             #
+    ECHO #               '7ZIP' is a file archiver with                        #
+    ECHO #                a high compression ratio.                            #
     ECHO #                                                                     #
-    ECHO # TOOL   : 7-Zip                                                      #
+    ECHO # TOOL   : 7ZIP                                                       #
     ECHO # VERSION: 19.00                                                      #
     ECHO # ARCH   : x64                                                        #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
-    ECHO #   %SCRIPT_NAME% [-h^|--help^|--pack^|--unpack]                             #
+    ECHO #     %SCRIPT_NAME% [-h^|--help^|--pack^|--unpack]                           #
     ECHO #                                                                     #
     ECHO # EXAMPLES:                                                           #
     ECHO #     %script_name% --help                                                #
@@ -128,7 +130,7 @@ EXIT /B 0
     ECHO #     PATH    This tool will export all local changes that it made to #
     ECHO #         the path's environment variable.                            #
     ECHO #                                                                     #
-    ECHO #     The environment variables will be exported only if this script  #
+    ECHO #     The environment variables will be exported only if this tool    #
     ECHO #     executes without any error.                                     #
     ECHO #                                                                     #
     ECHO #######################################################################
