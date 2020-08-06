@@ -1,9 +1,9 @@
 Description : An enhanced ECHO command line utility with color support.<br>
 Website     : https://www.codeproject.com/Articles/17033/Add-Colors-to-Batch-Files<br>
-<br>
+
 Observation : This great utility was written by Thomas Polaert.
              (https://www.codeproject.com/script/Membership/View.aspx?mid=138320)<br>
-<br>             
+            
 Source code : ./software/source/source.zip<br>
 Tests       : ./software/tests/test.cmd<br>
 
