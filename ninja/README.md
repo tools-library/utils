@@ -1,2 +1,2 @@
-Website    : https://ninja-build.org
-Repository : https://github.com/ninja-build/ninja
+Website    : https://ninja-build.org<br>
+Repository : https://github.com/ninja-build/ninja<br>

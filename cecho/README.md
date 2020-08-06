@@ -1,13 +1,11 @@
-Description : An enhanced ECHO command line utility with color support.
-
-Website     : https://www.codeproject.com/Articles/17033/Add-Colors-to-Batch-Files
-
-Observation: This great utility was written by Thomas Polaert.
-             (https://www.codeproject.com/script/Membership/View.aspx?mid=138320)
-
-Source code: ./software/source/source.zip
-
-Tests      : ./software/tests/test.cmd
+Description : An enhanced ECHO command line utility with color support.<br>
+Website     : https://www.codeproject.com/Articles/17033/Add-Colors-to-Batch-Files<br>
+<br>
+Observation : This great utility was written by Thomas Polaert.
+             (https://www.codeproject.com/script/Membership/View.aspx?mid=138320)<br>
+<br>             
+Source code : ./software/source/source.zip<br>
+Tests       : ./software/tests/test.cmd<br>
 
 --------------------------------------------------------------------------------
 
@@ -58,6 +56,6 @@ cecho {\u07 \u07}
 
 cecho This {black on blue}word{#} is black on a blue background
 
---------------------------------------------------------------------------------
+--------------------------------------------------------------------------------<br>
 Changes log: in cecho v2.0, the {0x00} ASCII code has been replaced by the 
 {\u0000} Unicode character.
