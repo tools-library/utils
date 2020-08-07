@@ -9,7 +9,6 @@ Tests       : ./software/tests/test.cmd
 
 --------------------------------------------------------------------------------
 
-
 Introduction
 
 Batch files are useful to deal with repetitive tasks. However, they lack some 
