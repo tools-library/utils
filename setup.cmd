@@ -124,7 +124,7 @@ EXIT /B 0
     ECHO # ARCH   : Mixed x64 and x32.                                         #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
-    ECHO #     %script_name% {[-h^|--help^|--pack^|--unpack] ^| [utilityN...]}         #
+    ECHO #     %script_name% {-h^|--help^|--pack^|--unpack ^| [utilityN...]}           #
     ECHO #                                                                     #
     ECHO # EXAMPLES:                                                           #
     ECHO #     %script_name%                                                       #
