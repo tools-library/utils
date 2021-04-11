@@ -1,1 +1,39 @@
-Website : https://www.7-zip.org
+
+                           7 Z I P
+
+        '7ZIP' is a file archiver with a high compression
+        ratio.
+
+        Website https://www.7-zip.org
+
+        After running this script, the tool will be
+        available in the system path.
+
+TOOL   : 7ZIP
+VERSION: 19.00
+ARCH   : x64
+
+USAGE:
+    setup.cmd [-h|--help|--pack|--unpack]
+
+EXAMPLES:
+    setup.cmd --help
+    setup.cmd --pack
+
+ARGUMENTS:
+    -h|--help    Print this help and exit.
+
+    --pack    Pack the content of the software folder in one
+        self-extract executable called 'software.exe'.
+
+    --unpack    Unpack the self-extract executable 'software.exe'
+        to the software folder.
+
+EXPORTED ENVIRONMENT VARIABLES:
+    TOOLSET_7ZIP_PATH    Absolute path where this tool is located.
+
+    PATH    This tool will export all local changes that it made to
+        the path's environment variable.
+
+    The environment variables will be exported only if this tool
+    executes without any error.

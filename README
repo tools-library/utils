@@ -1,0 +1,57 @@
+
+                             U T I L S
+
+       'UTILS' is a collection of scripts and small portable
+        programs that can be useful in a lot of projects.
+
+        After running this script, with the appropriate
+        arguments, the utilities will be available in the
+        system path.
+
+TOOL   : UTILS
+VERSION: 1.0.0
+ARCH   : Mixed x64 and x32.
+
+USAGE:
+    setup.cmd {-h|--help|--pack|--unpack | [utilityN...]}
+
+EXAMPLES:
+    setup.cmd
+    setup.cmd -h
+    setup.cmd --pack
+    setup.cmd cecho ninja
+
+ARGUMENTS:
+    -h|--help    Print this help and exit.
+
+    --pack    Pack the content of the software folder in one
+        self-extract executable called 'software.exe'.
+
+    --unpack    Unpack the self-extract executable 'software.exe'
+        to the software folder.
+
+    utilityN    A list of utilities to setup, separated by space.
+
+AVAILABLE UTILITIES:
+    cecho    Enhanced echo command line utility with color support.
+
+    7zip    A file archiver with a high compression ratio.
+
+    ninja    A small build system with a focus on speed.
+
+    graphviz    Tools for drawing graphs in DOT language scripts.
+
+    vswhere    A utility to find where Visual Studio - or other
+        products in the Visual Studio family - is located.
+
+EXPORTED ENVIRONMENT VARIABLES:
+    TOOLSET_UTILS_PATH    Absolute path where this tool is located.
+
+    PATH    This tool will export all local changes that it made to
+        the path's environment variable.
+
+    The environment variables will be exported only if this tool
+    executes without any error.
+
+RETURN ERROR CODES:
+    -1    If at least one utility was not found.

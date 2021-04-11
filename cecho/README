@@ -1,60 +1,40 @@
-Description : An enhanced ECHO command line utility with color support.
-Website     : https://www.codeproject.com/Articles/17033/Add-Colors-to-Batch-Files
 
-Observation : This great utility was written by Thomas Polaert.
-             (https://www.codeproject.com/script/Membership/View.aspx?mid=138320)
-            
-Source code : ./software/source/source.zip
-Tests       : ./software/tests/test.cmd
+                          C E C H O
 
---------------------------------------------------------------------------------
+        'CECHO' is an enhanced command line like 'echo'
+        utility, but with color support.
 
-Introduction
+        Website https://www.codeproject.com/Articles/17033/Add-Colors-to-Batch-Files
 
-Batch files are useful to deal with repetitive tasks. However, they lack some 
-user-friendly features such as colorizing console outputs. Colorized outputs 
-might be useful to draw attention to important information. The Win32 API 
-provides some useful functions to interact with the console (see Console 
-Functions in MSDN). But in your batch files, the only command available is 
-COLOR. The COLOR command only defines the color of the entire window console.
+        After running this script, the tool will be
+        available in the system path.
 
-cecho is an enhanced ECHO command line utility with color support, inspired by 
-the CTEXT utility by Dennis Bareis.
+TOOL   : CECHO
+VERSION: 2.0
+ARCH   : x64 and x32
 
-The last section explains how to embed the cecho utility into a batch file using
-the Debug.exe program (until Windows Vista).
+USAGE:
+    setup.cmd [-h|--help|--pack|--unpack]
 
-Using the Code
-cecho simply redirects the command arguments to the standard output after 
-parsing color information. cecho arguments include:
+EXAMPLES:
+    setup.cmd
+    setup.cmd -h
+    setup.cmd --pack
 
-{XX}: colors coded as two hexadecimal digits. E.g., {0A} light green
-{color}: color information as understandable text. E.g., {light red on black}
-{\n \t}: New line character - Tab character.
-{\u0000}: Unicode character code.
-{{: escape character '{'.
-{#}: restore initial colors.
-Available colors:
+ARGUMENTS:
+    -h|--help    Print this help and exit.
 
-0 = black	8 = gray
-1 = navy	9 = blue
-2 = green	A = lime
-3 = teal	B = aqua
-4 = maroon	C = red
-5 = purple	D = fuchsia
-6 = olive	E = yellow
-7 = silver	F = white
-Sample batch file:
+    --pack    Pack the content of the software folder in one
+        self-extract executable called 'software.exe'.
 
-@echo off
+    --unpack    Unpack the self-extract executable 'software.exe'
+        to the software folder.
 
-cecho {0C}This line is red{#}
+EXPORTED ENVIRONMENT VARIABLES:
+    TOOLSET_CECHO_PATH    Absolute path where this tool is located.
 
-REM Print ASCII char 0x07 (beep) 
-cecho {\u07 \u07}
+    PATH    This tool will export all local changes that it made to
+        the path's environment variable.
 
-cecho This {black on blue}word{#} is black on a blue background
-
---------------------------------------------------------------------------------
-Changes log: in cecho v2.0, the {0x00} ASCII code has been replaced by the 
-{\u0000} Unicode character.
+    The environment variables will be exported only if this tool
+    executes without any error.

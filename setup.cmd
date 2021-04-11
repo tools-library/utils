@@ -116,8 +116,12 @@ EXIT /B 0
     ECHO #                                                                     #
     ECHO #                      T O O L   S E T U P                            #
     ECHO #                                                                     #
-    ECHO #       'UTILS' is a small collection of scripts and programs         #
-    ECHO #        that can be useful in a lot of projects.                     #
+    ECHO #       'UTILS' is a collection of scripts and small portable         #
+    ECHO #        programs that can be useful in a lot of projects.            #
+    ECHO #                                                                     #
+    ECHO #        After running this script, with the appropriate              #
+    ECHO #        arguments, the utilities will be available in the            #
+    ECHO #        system path.                                                 #
     ECHO #                                                                     #
     ECHO # TOOL   : UTILS                                                      #
     ECHO # VERSION: 1.0.0                                                      #

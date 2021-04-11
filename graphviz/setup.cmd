@@ -62,10 +62,10 @@ EXIT /B 0
 :PACK
     IF EXIST "!utility_software_folder!" (
         CALL :SHOW_INFO "Packing utility files."
-        
+
         WHERE 7z >nul 2>nul
         IF !ERRORLEVEL! NEQ 0 CALL "%~dp0..\7zip\setup.cmd" --unpack
-        
+
         "%~dp0..\7zip\software\7z.exe" u -uq0 -mx9 -sfx "!utility_sfx!" "!utility_software_folder!"
     )
 EXIT /B 0
@@ -105,7 +105,7 @@ EXIT /B 0
     ECHO #                                                                     #
     ECHO #                      T O O L   S E T U P                            #
     ECHO #                                                                     #
-    ECHO #               'GRAPHVIZ' is a tools for drawing                     #
+    ECHO #               'GRAPHVIZ' is a tool for drawing                      #
     ECHO #                graphs in DOT language scripts.                      #
     ECHO #                                                                     #
     ECHO # TOOL   : GRAPHVIZ                                                   #
