@@ -1,0 +1,26 @@
+
+Contributing:
+
+If you want to add an issue or pull request, please ensure that the
+existing issues don't already cover your question or contribution.
+
+The issue board can be seen in the following url
+https://github.com/tools-library/win-utils/issues
+
+To get started contributing code to this project you can submit pull
+requests. Pull requests are welcomed! We'd like to review the design and
+implementation as early as possible so please submit the pull request
+even if it's not 100%. Let us know the purpose of the change and list
+the remaining items which need to be addressed before merging. Finally,
+PR's should include unit tests and documentation where appropriate.
+
+Important:
+
+This project brings a collection of scripts and small portable programs
+that can be useful in a lot of projects. The requirements for any
+utility (software or script) to be included in this project are:
+
+    * The utility must be small.
+    * The utility setup.cmd script does not need to be called with
+      special parameters (this is because of the way the main setup.cmd
+      file works).
