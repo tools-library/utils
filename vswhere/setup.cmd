@@ -62,10 +62,10 @@ EXIT /B 0
 :PACK
     IF EXIST "!utility_software_folder!" (
         CALL :SHOW_INFO "Packing utility files."
-        
+
         WHERE 7z >nul 2>nul
         IF !ERRORLEVEL! NEQ 0 CALL "%~dp0..\7zip\setup.cmd" --unpack
-        
+
         "%~dp0..\7zip\software\7z.exe" u -uq0 -mx9 -sfx "!utility_sfx!" "!utility_software_folder!"
     )
 EXIT /B 0
@@ -82,18 +82,18 @@ EXIT /B 0
 :SHOW_INFO
     WHERE cecho >nul 2>nul
     IF %ERRORLEVEL% EQU 0 (
-        cecho {olive}[TOOLSET - UTILS - VSWHERE]{default} INFO: %~1{\n}
+        cecho {olive}[TOOLSET - VSWHERE]{default} INFO: %~1{\n}
     ) ELSE (
-        echo [TOOLSET - UTILS - VSWHERE] INFO: %~1
+        echo [TOOLSET - VSWHERE] INFO: %~1
     )
 EXIT /B 0
 
 :SHOW_ERROR
     WHERE cecho >nul 2>nul
     IF %ERRORLEVEL% EQU 0 (
-        cecho {olive}[TOOLSET - UTILS - VSWHERE]{red} ERROR: %~1 {default} {\n}
+        cecho {olive}[TOOLSET - VSWHERE]{red} ERROR: %~1 {default} {\n}
     ) ELSE (
-        echo [TOOLSET - UTILS - VSWHERE] ERROR: %~1
+        echo [TOOLSET - VSWHERE] ERROR: %~1
     )
 EXIT /B 0
 

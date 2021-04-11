@@ -17,7 +17,7 @@ SETLOCAL ENABLEDELAYEDEXPANSION
     IF  [%current_arg%] EQU [--help]   SET help_arg=true
     IF  [%current_arg%] EQU [--pack]   SET pack_arg=true
     IF  [%current_arg%] EQU [--unpack] SET unpack_arg=true
-    
+
     IF  [%help_arg%] EQU [true] (
         CALL :SHOW_HELP
     ) ELSE (
@@ -78,18 +78,18 @@ EXIT /B 0
 :SHOW_INFO
     WHERE cecho >nul 2>nul
     IF %ERRORLEVEL% EQU 0 (
-        cecho {olive}[TOOLSET - UTILS - 7ZIP]{default} INFO: %~1{\n}
+        cecho {olive}[TOOLSET - 7ZIP]{default} INFO: %~1{\n}
     ) ELSE (
-        echo [TOOLSET - UTILS - 7ZIP] INFO: %~1
+        echo [TOOLSET - 7ZIP] INFO: %~1
     )
 EXIT /B 0
 
 :SHOW_ERROR
     WHERE cecho >nul 2>nul
     IF %ERRORLEVEL% EQU 0 (
-        cecho {olive}[TOOLSET - UTILS - 7ZIP]{red} ERROR: %~1 {default} {\n}
+        cecho {olive}[TOOLSET - 7ZIP]{red} ERROR: %~1 {default} {\n}
     ) ELSE (
-        echo [TOOLSET - UTILS - 7ZIP] ERROR: %~1
+        echo [TOOLSET - 7ZIP] ERROR: %~1
     )
 EXIT /B 0
 

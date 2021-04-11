@@ -92,9 +92,9 @@ EXIT /B 0
     SET "cecho_cmd=%utils_folder%\cecho\software\x32\cecho.exe"
     SET msg=%~1
     IF EXIST "%cecho_cmd%" (
-        "%cecho_cmd%" {olive}[TOOLSET - UTILS]{default} INFO: %msg%{\n}
+        "%cecho_cmd%" {olive}[TOOLSET]{default} INFO: %msg%{\n}
     ) ELSE (
-        ECHO [TOOLSET - UTILS] INFO: %msg%
+        ECHO [TOOLSET] INFO: %msg%
     )
 EXIT /B 0
 
@@ -102,9 +102,9 @@ EXIT /B 0
     SET "cecho_cmd=%utils_folder%\cecho\software\x32\cecho.exe"
     SET msg=%~1
     IF EXIST "%cecho_cmd%" (
-        "%cecho_cmd%" {olive}[TOOLSET - UTILS]{red} ERROR: %msg% {default} {\n}
+        "%cecho_cmd%" {olive}[TOOLSET]{red} ERROR: %msg% {default} {\n}
     ) ELSE (
-        ECHO [TOOLSET - UTILS] ERROR: %msg%
+        ECHO [TOOLSET] ERROR: %msg%
     )
 EXIT /B 0
 

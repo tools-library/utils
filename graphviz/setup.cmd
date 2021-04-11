@@ -82,18 +82,18 @@ EXIT /B 0
 :SHOW_INFO
     WHERE cecho >nul 2>nul
     IF %ERRORLEVEL% EQU 0 (
-        cecho {olive}[TOOLSET - UTILS - GRAPHVIZ]{default} INFO: %~1{\n}
+        cecho {olive}[TOOLSET - GRAPHVIZ]{default} INFO: %~1{\n}
     ) ELSE (
-        echo [TOOLSET - UTILS - GRAPHVIZ] INFO: %~1
+        echo [TOOLSET - GRAPHVIZ] INFO: %~1
     )
 EXIT /B 0
 
 :SHOW_ERROR
     WHERE cecho >nul 2>nul
     IF %ERRORLEVEL% EQU 0 (
-        cecho {olive}[TOOLSET - UTILS - GRAPHVIZ]{red} ERROR: %~1 {default} {\n}
+        cecho {olive}[TOOLSET - GRAPHVIZ]{red} ERROR: %~1 {default} {\n}
     ) ELSE (
-        echo [TOOLSET - UTILS - GRAPHVIZ] ERROR: %~1
+        echo [TOOLSET - GRAPHVIZ] ERROR: %~1
     )
 EXIT /B 0
 
