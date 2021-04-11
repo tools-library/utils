@@ -169,7 +169,7 @@ EXIT /B 0
     ECHO #     --unpack    Unpack the self-extract executable 'software.exe'   #
     ECHO #         to the software folder.                                     #
     ECHO #                                                                     #
-    ECHO #     utilityN    A list of utilities to setup, separated by space.   #
+    ECHO #     utilityN    A list of utilities to load, separated by space.    #
     ECHO #                                                                     #
     ECHO # AVAILABLE UTILITIES:                                                #
     ECHO #     cecho    Enhanced echo command line utility with color support. #

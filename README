@@ -30,7 +30,7 @@ ARGUMENTS:
     --unpack    Unpack the self-extract executable 'software.exe'
         to the software folder.
 
-    utilityN    A list of utilities to setup, separated by space.
+    utilityN    A list of utilities to load, separated by space.
 
 AVAILABLE UTILITIES:
     cecho    Enhanced echo command line utility with color support.
