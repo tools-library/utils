@@ -6,17 +6,23 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 :PROCESS_CMD
     SET "utils_folder=%~dp0"
     SET "available_utilities=7zip cecho ninja graphviz vswhere"
+    SET "specified_utilities_from_args="
 
     SET help_arg=false
     SET pack_arg=false
     SET unpack_arg=false
 
-    SET current_arg=%1
-    IF  [%current_arg%] EQU []         SET help_arg=true
-    IF  [%current_arg%] EQU [-h]       SET help_arg=true
-    IF  [%current_arg%] EQU [--help]   SET help_arg=true
-    IF  [%current_arg%] EQU [--pack]   SET pack_arg=true
-    IF  [%current_arg%] EQU [--unpack] SET unpack_arg=true
+    SET first_arg=%1
+    IF  [%first_arg%] EQU []         SET help_arg=true
+    IF  [%first_arg%] EQU [-h]       SET help_arg=true
+    IF  [%first_arg%] EQU [--help]   SET help_arg=true
+    IF  [%first_arg%] EQU [--pack]   SET pack_arg=true
+    IF  [%first_arg%] EQU [--unpack] SET unpack_arg=true
+
+    :LOOP
+        SET "specified_utilities_from_args=%specified_utilities_from_args%%1 "
+        SHIFT
+    IF NOT [%1]==[] GOTO LOOP
 
     IF  [%help_arg%] EQU [true] (
         CALL :SHOW_HELP
@@ -40,28 +46,46 @@ SETLOCAL ENABLEDELAYEDEXPANSION
     REM world (For example, a calling script of this script).
     ENDLOCAL & (
         SET "TOOLSET_UTILS_PATH=%utils_folder%"
+        SET "TOOLSET_UTILS_LOADED=%specified_utilities_from_args%"
         SET "PATH=%PATH%"
+
+        IF NOT "%TOOLSET_7ZIP_PATH%"=="" (
+            SET "TOOLSET_7ZIP_PATH=%TOOLSET_7ZIP_PATH%"
+        )
+
+        IF NOT "%TOOLSET_CECHO_PATH%"=="" (
+            SET "TOOLSET_CECHO_PATH=%TOOLSET_CECHO_PATH%"
+        )
+
+        IF NOT "%TOOLSET_GRAPHVIZ_PATH%"=="" (
+            SET "TOOLSET_GRAPHVIZ_PATH=%TOOLSET_GRAPHVIZ_PATH%"
+        )
+
+        IF NOT "%TOOLSET_NINJA_PATH%"=="" (
+            SET "TOOLSET_NINJA_PATH=%TOOLSET_NINJA_PATH%"
+        )
+
+        IF NOT "%TOOLSET_VSWHERE_PATH%"=="" (
+            SET "TOOLSET_VSWHERE_PATH=%TOOLSET_VSWHERE_PATH%"
+        )
     )
 EXIT /B 0
 
 
 
 :MAIN
-    CALL :UNPACK
-
     REM Iterate over a list of utilities passed as arguments and run the
     REM corresponding setup script.
-    :LOOP
-        SET utility_name=%1
-        SET "utility_setup_cmd=%utils_folder%%utility_name%\setup.cmd"
-        IF EXIST "%utility_setup_cmd%" (
-            CALL "%utility_setup_cmd%"
+    FOR %%u IN (%specified_utilities_from_args%) DO (
+        SET utility_name=%%u
+        SET "utility_setup_cmd=%utils_folder%!utility_name!\setup.cmd"
+        IF EXIST "!utility_setup_cmd!" (
+            CALL "!utility_setup_cmd!"
         ) ELSE (
-            CALL :SHOW_ERROR "An utility with name '%utility_name%' was not found."
+            CALL :SHOW_ERROR "An utility with name '!utility_name!' was not found."
             SET has_error=true
         )
-        SHIFT
-    IF NOT [%1]==[] GOTO LOOP
+    )
 
     IF [%has_error%] EQU [true] (
         EXIT /B -1
@@ -145,7 +169,7 @@ EXIT /B 0
     ECHO #     --unpack    Unpack the self-extract executable 'software.exe'   #
     ECHO #         to the software folder.                                     #
     ECHO #                                                                     #
-    ECHO #     utilityN    A list of utilities to setup, separated by space.   #
+    ECHO #     utilityN    A list of utilities to load, separated by space.    #
     ECHO #                                                                     #
     ECHO # AVAILABLE UTILITIES:                                                #
     ECHO #     cecho    Enhanced echo command line utility with color support. #
@@ -161,6 +185,28 @@ EXIT /B 0
     ECHO #                                                                     #
     ECHO # EXPORTED ENVIRONMENT VARIABLES:                                     #
     ECHO #     TOOLSET_UTILS_PATH    Absolute path where this tool is located. #
+    ECHO #                                                                     #
+    ECHO #     TOOLSET_7ZIP_PATH    Absolute path where the '7zip' tool is     #
+    ECHO #         located. OBS: Exported only if the utility has been         #
+    ECHO #         loaded.                                                     #
+    ECHO #                                                                     #
+    ECHO #     TOOLSET_CECHO_PATH    Absolute path where 'cecho' tool is       #
+    ECHO #         located. OBS: Exported only if the utility has been         #
+    ECHO #         loaded.                                                     #
+    ECHO #                                                                     #
+    ECHO #     TOOLSET_GRAPHVIZ_PATH    Absolute path where 'graphviz' tool is #
+    ECHO #         located. OBS: Exported only if the utility has been         #
+    ECHO #         loaded.                                                     #
+    ECHO #                                                                     #
+    ECHO #     TOOLSET_NINJA_PATH    Absolute path where 'ninja' tool is       #
+    ECHO #         located. OBS: Exported only if the utility has been         #
+    ECHO #         loaded.                                                     #
+    ECHO #                                                                     #
+    ECHO #     TOOLSET_VSWHERE_PATH    Absolute path where 'vswhere' tool is   #
+    ECHO #         located. OBS: Exported only if the utility has been         #
+    ECHO #         loaded.                                                     #
+    ECHO #                                                                     #
+    ECHO #     TOOLSET_UTILS_LOADED    A list of loaded utilities.             #
     ECHO #                                                                     #
     ECHO #     PATH    This tool will export all local changes that it made to #
     ECHO #         the path's environment variable.                            #

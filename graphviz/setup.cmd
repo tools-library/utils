@@ -12,11 +12,11 @@ SETLOCAL ENABLEDELAYEDEXPANSION
     SET pack_arg=false
     SET unpack_arg=false
 
-    SET current_arg=%1
-    IF  [%current_arg%] EQU [-h]       SET help_arg=true
-    IF  [%current_arg%] EQU [--help]   SET help_arg=true
-    IF  [%current_arg%] EQU [--pack]   SET pack_arg=true
-    IF  [%current_arg%] EQU [--unpack] SET unpack_arg=true
+    SET first_arg=%1
+    IF  [%first_arg%] EQU [-h]       SET help_arg=true
+    IF  [%first_arg%] EQU [--help]   SET help_arg=true
+    IF  [%first_arg%] EQU [--pack]   SET pack_arg=true
+    IF  [%first_arg%] EQU [--unpack] SET unpack_arg=true
 
     IF  [%help_arg%] EQU [true] (
         CALL :SHOW_HELP
