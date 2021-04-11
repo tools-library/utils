@@ -1,0 +1,8 @@
+
+* Add an argument indicating that changes made to the 'PATH'
+environment variable should not be exported. The main reason
+for this is that we could use this tool with minimal impact
+on the system's environment variables. That way, when we are
+going to use any utility provided by this tool, we can index
+them based on the exported environment variable 'TOOLSET_UTILS_PATH'
+among others.
