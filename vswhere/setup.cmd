@@ -107,6 +107,11 @@ EXIT /B 0
     ECHO #                                                                     #
     ECHO #               'VSWHERE' a Visual Studio locator.                    #
     ECHO #                                                                     #
+    ECHO #               Repository https://github.com/microsoft/vswhere       #
+    ECHO #                                                                     #
+    ECHO #               After running the %SCRIPT_NAME%, the tool will            #
+    ECHO #               be available in the system path.                      #
+    ECHO #                                                                     #
     ECHO # TOOL   : VSWHERE                                                    #
     ECHO # VERSION: 2.8.4                                                      #
     ECHO # ARCH   : x32                                                        #

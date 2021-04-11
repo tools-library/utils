@@ -107,6 +107,12 @@ EXIT /B 0
     ECHO #                                                                     #
     ECHO #     'NINJA' is a small build system with a focus on speed.          #
     ECHO #                                                                     #
+    ECHO #     Website https://ninja-build.org                                 #
+    ECHO #     Repository https://github.com/ninja-build/ninja                 #
+    ECHO #                                                                     #
+    ECHO #     After running the %SCRIPT_NAME%, the tool will                      #
+    ECHO #     be available in the system path.                                #
+    ECHO #                                                                     #
     ECHO # TOOL   : NINJA                                                      #
     ECHO # VERSION: 1.10.0                                                     #
     ECHO # ARCH   : x64                                                        #

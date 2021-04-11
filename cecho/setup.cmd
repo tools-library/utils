@@ -109,6 +109,12 @@ EXIT /B 0
     ECHO #             'CECHO' is an enhanced command line like                #
     ECHO #             'echo' utility, but with color support.                 #
     ECHO #                                                                     #
+    ECHO #             Website https://www.codeproject.com/Articles/           #
+    ECHO #                     17033/Add-Colors-to-Batch-Files                 #
+    ECHO #                                                                     #
+    ECHO #             After running the %SCRIPT_NAME%, the tool will be           #
+    ECHO #             available in the system path.                           #
+    ECHO #                                                                     #
     ECHO # TOOL   : CECHO                                                      #
     ECHO # VERSION: 2.0                                                        #
     ECHO # ARCH   : x64 and x32                                                #

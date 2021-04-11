@@ -104,6 +104,11 @@ EXIT /B 0
     ECHO #               '7ZIP' is a file archiver with                        #
     ECHO #                a high compression ratio.                            #
     ECHO #                                                                     #
+    ECHO #                Website https://www.7-zip.org                        #
+    ECHO #                                                                     #
+    ECHO #                After running the %SCRIPT_NAME%, the tool will be        #
+    ECHO #                available in the system path.                        #
+    ECHO #                                                                     #
     ECHO # TOOL   : 7ZIP                                                       #
     ECHO # VERSION: 19.00                                                      #
     ECHO # ARCH   : x64                                                        #

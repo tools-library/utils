@@ -4,7 +4,7 @@
        'UTILS' is a collection of scripts and small portable
         programs that can be useful in a lot of projects.
 
-        After running this script, with the appropriate
+        After running the setup.cmd, with the appropriate
         arguments, the utilities will be available in the
         system path.
 

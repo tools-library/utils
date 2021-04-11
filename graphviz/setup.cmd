@@ -108,6 +108,11 @@ EXIT /B 0
     ECHO #               'GRAPHVIZ' is a tool for drawing                      #
     ECHO #                graphs in DOT language scripts.                      #
     ECHO #                                                                     #
+    ECHO #                Website http://graphviz.org                          #
+    ECHO #                                                                     #
+    ECHO #                After running the %SCRIPT_NAME%, the tool will be        #
+    ECHO #                available in the system path.                        #
+    ECHO #                                                                     #
     ECHO # TOOL   : GRAPHVIZ                                                   #
     ECHO # VERSION: 2.44.1                                                     #
     ECHO # ARCH   : x64                                                        #
