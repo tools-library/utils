@@ -7,7 +7,7 @@
         Website https://ninja-build.org
         Repository https://github.com/ninja-build/ninja
 
-        After running this script, the tool will
+        After running the setup.cmd, the tool will
         be available in the system path.
 
 TOOL   : NINJA

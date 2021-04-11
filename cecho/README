@@ -6,7 +6,7 @@
 
         Website https://www.codeproject.com/Articles/17033/Add-Colors-to-Batch-Files
 
-        After running this script, the tool will be
+        After running the setup.cmd, the tool will be
         available in the system path.
 
 TOOL   : CECHO

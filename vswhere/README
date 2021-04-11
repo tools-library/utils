@@ -5,7 +5,7 @@
 
         Repository https://github.com/microsoft/vswhere
 
-        After running this script, the tool will
+        After running the setup.cmd, the tool will
         be available in the system path.
 
 TOOL   : VSWHERE
