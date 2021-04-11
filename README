@@ -47,6 +47,28 @@ AVAILABLE UTILITIES:
 EXPORTED ENVIRONMENT VARIABLES:
     TOOLSET_UTILS_PATH    Absolute path where this tool is located.
 
+    TOOLSET_7ZIP_PATH    Absolute path where the '7zip' tool is
+        located. OBS: Exported only if the utility has been
+        loaded.
+
+    TOOLSET_CECHO_PATH    Absolute path where 'cecho' tool is
+        located. OBS: Exported only if the utility has been
+        loaded.
+
+    TOOLSET_GRAPHVIZ_PATH    Absolute path where 'graphviz' tool is
+        located. OBS: Exported only if the utility has been
+        loaded.
+
+    TOOLSET_NINJA_PATH    Absolute path where 'ninja' tool is
+        located. OBS: Exported only if the utility has been
+        loaded.
+
+    TOOLSET_VSWHERE_PATH    Absolute path where 'vswhere' tool is
+        located. OBS: Exported only if the utility has been
+        loaded.
+
+    TOOLSET_UTILS_LOADED    A list of loaded utilities.
+
     PATH    This tool will export all local changes that it made to
         the path's environment variable.
 
