@@ -1,4 +1,8 @@
 
+* The echo command is truncating large texts. We must investigate
+and implement a solution. It's not a problem at the moment, but
+it may be in the future in certain situations.
+
 * Add an argument indicating that changes made to the 'PATH'
 environment variable should not be exported. The main reason
 for this is that we could use this tool with minimal impact
